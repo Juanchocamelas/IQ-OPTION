@@ -1,0 +1,106 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+
+/* Estilos generales para el cuerpo de la pagina */
+
+body {
+  background-color: #1E1E1E;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;  /* Apilacion de bloques verticalmente para que cada uno ocupe su espacio */
+  align-items: center;
+  padding: 40px 20px;  /* Espacio alrededor del contenido, espacio desde arrriba a abajo y de los lados */
+  animation: fadeIn 2s ease-out; /* Tiempo de animacion de entrada */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }  /* Movimiento en Y suave de 10px desde abajo */
+  to { opacity: 1; transform: translateY(0); } /* Termina en su posicion original */
+}
+
+
+/* Estilo para el logo */
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el parrafo introductorio */
+
+p.intro {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1em;
+  color: #999;
+  margin-bottom: 30px; 
+}
+
+/* Estilo para el ancho de la caja en pantalla inicialmente*/
+
+.grid {
+  max-width: 1000px;
+  width: 100%; /* No es posible adjuntarle altura, ya que el contenedor esta vacio, con box, que contiene elementos se ajusta*/
+}
+
+/* Estilo para la posicion de los elementos iniciales dentro de la caja, y establecer su altura*/
+.box {
+  background: #2a2828;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex; /* Permite centrar los elementos */
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+/* Tanto para el ancho establecido y la altura de los elementos iniciales seran ahora correspondientes a las dimensiones de la nueva imagen*/
+
+.grid:has(.image-preview),
+.box:has(.image-preview) {
+  width: auto;
+  height: auto;
+}
+
+/*Dimensiones de la nueva imagen */
+
+.image-preview {
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+
+/* Estilo para el hover de la caja */
+.box:hover {
+  background: #1e1e1e;
+  transform: scale(1.01);
+}
+
+/* Estilo para el icono de carga */
+
+.upload-icon {
+  max-width: 80px;
+  transition: opacity 0.2s;
+}
+
+
+/* Estilo de posicion para el boton limpiar seleccion */
+
+
+/* Estilos para el boton de limpiar seleccion */
+.btn {
+  font-family: 'Satoshi', sans-serif;
+  margin-top: 40px;
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Color mostrado en el hover del boton */
+.btn:hover {
+  background-color: #2a2a2a;
+}

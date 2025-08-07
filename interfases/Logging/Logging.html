@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TrendScope - Login</title>
+  <link rel="stylesheet" href="Logging.css">
+</head>
+<body>
+  <!-- Pantalla inicial-->
+  <div class="login-container">
+    <div class="panel left-panel">
+      <h2>¿Nuevo aquí?</h2>
+       <img src="Images_Logging/fishers.png" alt="imagen_pescadores" class="fishers" />
+       <div class="diagonal-line"></div>
+      <button class="btn">Registrate</button>
+    </div>
+    <div class="panel right-panel">
+      <h2>Bienvenido de nuevo</h2>
+      <input type="text" placeholder="Usuario" class="input-field">
+      <input type="password" placeholder="Contraseña" class="input-field">
+      <button class="btn">Entrar</button>
+    </div>
+  </div>
+
+   <!-- sonido para los botones-->
+  <audio id="Sound_button" src="Sounds_Logging/Sound_button.wav" preload="auto"></audio>
+  <audio id="Single_type_key" src="Sounds_Logging/Single_type_key.wav" preload="auto"></audio>
+
+  <!-- Segunda pantalla si es que seleccionan el boton "Registrate"-->
+
+  <!-- Overlay para registro -->
+<div class="registro-overlay" id="registroPanel">
+  <div class="registro-panel">
+    <h2>Crear cuenta</h2>
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Correo electrónico">
+    <input type="password" placeholder="Contraseña">
+    <button>Enviar</button>
+  </div>
+</div>
+
+
+  <script src="Logging.js"></script> 
+</body>
+</html>
